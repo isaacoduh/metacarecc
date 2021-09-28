@@ -64,3 +64,8 @@ Example request body:
 
 ### List Characters Using 
 `GET   /characters?sortBy=height&order=ASC`
+
+
+
+## Staging Area
+Here all relevant staging would be setup.
