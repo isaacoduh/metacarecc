@@ -69,3 +69,6 @@ Example request body:
 
 ## Staging Area
 Here all relevant staging would be setup.
+
+
+See [Postman Doc] (https://documenter.getpostman.com/view/9901741/UUxzBTSd)
