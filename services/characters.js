@@ -45,11 +45,10 @@ async function retrieveCharacters(param, order, filterParams){
     }else if (!filterParams == {}){
         const {filter, value} = filterParams;
         console.log(filter);
-        console.log(value);
         const rows = await db.query(
             `SELECT *
              FROM characters
-             WHERE ?=?`,[filter, value]
+             WHERE ?=?`,[filterParams.filter, filterParams.value]
         );
         const data = helper.emptyOrRows(rows);
         const totalCount = data.length;
