@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 const movieRouter = require('./routes/movies');
 const commentRouter = require('./routes/comments');
 const characterRouter = require('./routes/characters');
@@ -29,7 +29,6 @@ app.use((err, req, res, next) => {
     return;
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+app.listen(port, function() {
+    console.log("App is running on port " + port);
 });
