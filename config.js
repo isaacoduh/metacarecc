@@ -8,11 +8,10 @@ const config = {
     //     database: env.DB_NAME || 'sql4440369',
     // },
     db: {
-        host: env.DB_HOST || "",
-        user: env.DB_USER || '',
-        password: env.DB_PASSWORD || '',
-        database: env.DB_NAME || '',
-        port: env.DB_PORT || ''
+        host: "us-cdbr-east-04.cleardb.com",
+        user: "b8cd28b130d34c",
+        password: "cb7863c2",
+        database: "heroku_f8cab3ca6f38d74",
     },
     listPerPage: env.LIST_PER_PAGE || 10,
 };
