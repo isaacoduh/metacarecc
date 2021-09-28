@@ -36,7 +36,7 @@ async function getMovies() {
     //     `SELECT title, release_date, opening_crawl, count(movies.id) as commentsCount FROM movies JOIN comments WHERE movies.id = comments.movie_id`
     // );
     const rows = await db.query(
-        `SELECT movies.title, movies.release_date, movies.opening_crawl, (SELECT COUNT(*) FROM comments WHERE movie_id = movies.id) AS comments_count FROM movies`
+        `SELECT movies.title, movies.release_date, movies.opening_crawl, (SELECT COUNT(*) FROM comments WHERE movie_id = movies.id) AS comments_count FROM movies ORDER BY release_date ASC`
     );
     const data = helper.emptyOrRows(rows);
     return {
